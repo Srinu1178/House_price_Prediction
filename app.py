@@ -46,7 +46,7 @@ def preprocess_data(df):
         df['bhk'] = 0
 
     df['bhk'] = df['bhk'].replace(0, 1)
-    df['price_per_sqft'] = df['price'] / df['total_sqft']
+    df['price_per_sqft'] = df['price'] * 100000/ df['total_sqft']
     df['bath_per_bhk'] = df['bath'] / df['bhk']
     df.replace([np.inf, -np.inf], np.nan, inplace=True)
     df.fillna(df.median(numeric_only=True), inplace=True)
