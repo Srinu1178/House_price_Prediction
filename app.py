@@ -9,10 +9,10 @@ import seaborn as sns
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 
 # Load models and scaler
-scaler = joblib.load("D:/ProjectResearch/scaler.pkl")
-xgb_model = joblib.load("D:/ProjectResearch/xgb_model.pkl")
-ann_model = load_model("D:/ProjectResearch/ann_model.keras")
-lstm_model = load_model("D:/ProjectResearch/lstm_model.keras")
+scaler = joblib.load("scaler.pkl")
+xgb_model = joblib.load("xgb_model.pkl")
+ann_model = load_model("ann_model.keras")
+lstm_model = load_model("lstm_model.keras")
 
 # Page configuration
 st.set_page_config(page_title="🏠 House Price Prediction", layout="wide")
